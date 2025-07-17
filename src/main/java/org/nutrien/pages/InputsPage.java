@@ -17,12 +17,6 @@ public class InputsPage {
         this.driver = driver;
     }
 
-    public void setUp() {
-        driver.get("https://the-internet.herokuapp.com/inputs");
-        new WebDriverWait(driver, Duration.ofSeconds(10))
-                .until(ExpectedConditions.presenceOfElementLocated(inputField));
-    }
-
     public void enterNumber(String number) {
         WebElement input = driver.findElement(inputField);
         input.clear();

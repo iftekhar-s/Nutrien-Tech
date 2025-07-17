@@ -17,12 +17,6 @@ public class IndexPage {
         this.driver = driver;
     }
 
-    public void open() {
-        driver.get("https://the-internet.herokuapp.com/");
-        new WebDriverWait(driver, Duration.ofSeconds(10))
-                .until(ExpectedConditions.presenceOfAllElementsLocatedBy(pageLinks));
-    }
-
     public void clickPageLink(String pageName) {
         List<WebElement> links = driver.findElements(pageLinks);
         links.stream()

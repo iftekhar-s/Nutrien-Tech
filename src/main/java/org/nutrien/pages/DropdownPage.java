@@ -13,10 +13,6 @@ public class DropdownPage {
         this.driver = driver;
     }
 
-    public void open() {
-        driver.get("https://the-internet.herokuapp.com/dropdown");
-    }
-
     public void selectOption(String optionText) {
         WebElement dropdownElement = driver.findElement(dropdown);
         Select dropdown = new Select(dropdownElement);

@@ -1,7 +1,7 @@
 @DROPDOWN
-Feature: The Internet Guinea Pig Website
+Feature: The Internet Dropdown Page
 
-  Scenario Outline: As a user, I can select options from a dropdown menu
+  Scenario Outline: Verify dropdown selection functionality
     Given I am on the Dropdown page
     When I select "<option>"
     Then The dropdown value should be "<option>"
@@ -11,6 +11,8 @@ Feature: The Internet Guinea Pig Website
       | Option 1 |
       | Option 2 |
 
-  Scenario Outline: The dropdown should have a placeholder
+  Scenario: Verify dropdown default state
     Given I am on the Dropdown page
     Then The dropdown value should be "Please select an option"
+
+    #***Previously The second scenario using Outline since it has no Examples***
